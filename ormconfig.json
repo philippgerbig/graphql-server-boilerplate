@@ -1,0 +1,14 @@
+{
+  "name": "default",
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "philippgerbig",
+  "password": "",
+  "database": "type-graphql",
+  "synchronize": true,
+  "logging": false,
+  "entities": [
+    "src/entity/*.*"
+  ]
+}
