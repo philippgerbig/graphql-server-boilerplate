@@ -10,7 +10,7 @@ export const testConnection = (drop: boolean = false) => {
       "username": "philippgerbig",
       "password": "",
       "database": "type-graphql",
-      "synchronize": drop,
+      "synchronize": false,
       "logging": drop,
       "entities": [
         "src/entity/*.*"
