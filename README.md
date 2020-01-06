@@ -1,5 +1,5 @@
 # graphql-server-boilerplate
-A graphql server boilerplate with apollo-server and typeorm.
+A graphql typescript server boilerplate with apollo-server, type-graphql and typeorm.
 
 ---
 
