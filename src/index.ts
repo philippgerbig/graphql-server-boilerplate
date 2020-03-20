@@ -8,7 +8,9 @@ import session from "express-session";
 import connectRedis from "connect-redis";
 import cors from "cors";
 
+import logger from './utils/logger'
 import { redis } from "./redis";
+// import { logger } from "./modules/middleware/logger";
 
 const main = async () => {
   await createConnection();
@@ -60,7 +62,7 @@ const main = async () => {
   // TODO: add port to env file
   app.listen(4000, () => {
     // TODO: add winston logger
-    console.log("server started on http://localhost:4000/graphql");
+    logger.info("server started on http://localhost:4000/graphql");
   });
 };
 

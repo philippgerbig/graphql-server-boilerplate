@@ -3,7 +3,7 @@ import argon2 from 'argon2'
 import { User } from '../../entity/User'
 import { RegisterInput } from './register/RegisterInput'
 import { isAuth } from '../middleware/isAuth'
-import { logger } from '../middleware/logger'
+import logger from '../../utils/logger'
 import { createConfirmationUrl } from '../../utils/createConfirmationUrl'
 import { sendEmail } from '../../utils/sendEmail'
 
@@ -23,6 +23,7 @@ export class RegisterResolver {
     lastName,
     password
   }: RegisterInput): Promise<User> {
+    logger.debug(`hashing password ${password}`)
     const hashedPassword = await argon2.hash(password)
 
     const user = await User.create({
